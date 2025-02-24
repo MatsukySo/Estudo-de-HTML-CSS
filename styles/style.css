@@ -30,6 +30,10 @@ body{
     font-family: var(--fonte-padrao);
 }
 
+a.externo::after{
+    content: '\00A0\1f517';
+}
+
 header{
     font-family: var(--fonte-destaque);
     background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
@@ -91,6 +95,7 @@ main{
     border-bottom-right-radius: 10px;
 }
 
+
 main p{
     margin: 15px 0px;
     text-align: justify;
@@ -101,6 +106,11 @@ main p{
 main strong{
     color: var(--cor3);
     font-weight: bold;
+}
+
+main > article  strong{
+    
+    color: var(--cor5);
 }
 
 main a{
@@ -126,6 +136,7 @@ main img.pequena{
     display: block;
     margin: auto;
 }
+
 main h1{
     font-family: var(--fonte-android);
     color: var(--cor5);
@@ -139,6 +150,55 @@ main h2{
 main h3{
     color: var(--cor4);
 }
+
+div.video{
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 56.7%;
+    position: relative;
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside{
+    background-color: var(--cor3);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.555);
+
+}
+
+aside > h3{
+    color: var(--cor5);
+}
+aside > ul{
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside;
+    
+}
+
 footer{
     background-color: var(--cor5);
+    color: var(--cor2);
+    text-align: center;
+    padding: 2px;
+}
+footer a{
+    text-decoration: none;
+    border-radius: 3px;
+    color: var(--cor1);
+    background-color: var(--cor4);
+    font-weight: bolder;
+}
+footer a:hover{
+    transition-duration: 0.5s;
+    background-color: var(--cor3);
+    
 }
